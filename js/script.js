@@ -1,21 +1,32 @@
 $(".play").click(function() {
+  
   // Computer Random Choice
-  let input;
-  input = Math.random() * 3;
-  input = Math.ceil(input);
-  if (input == 1) {
+  let computerInput;
+  computerInput = Math.random() * 3;
+  computerInput = Math.ceil(computerInput);
+  if (computerInput === 1) {
     $(".computerChoice").text("Rock")
   }
-  if (input == 2) {
+  else if (computerInput === 2) {
     $(".computerChoice").text("Paper")
   }
-  if (input == 3) {
+  else if (computerInput === 3) {
    $(".computerChoice").text("Scissors")
   }
   
+  //User Choice
+  let userInput;
+  userInput = $(".input").val();
+  $(".userChoice").text(userInput);
+  
   //Win or Lose
-  if (".userChoice" == "rock") && (".computerChoice" == "Roc`k") {
+  console.log("userInput",userInput,"Rock");
+  if (".input" === "rock","Rock") 
+     if (computerInput === 1); {
+     $(".result").text(`Tie`);
   }
+  
+
 });
 
 
