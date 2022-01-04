@@ -1,7 +1,19 @@
 .row {
   text-align: center;
 }
+
 .choices {
   display: flex;
   justify-content: space-between;
+}
+
+h1 {
+  color: black;
+  font-family: Courier, monospace;
+  font-size: 4; 
+}
+
+body {
+  background-color: rgb(233,236,239);
+  font-family: Andale Mono, monospace;
 }

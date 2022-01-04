@@ -25,7 +25,7 @@ $(".play").click(function() {
   //Win or Lose
   console.log("userInput",userInput,"Rock");
   if (userInput.toLowerCase() === "rock" && computerInput === 1) {
-     $(".result").text(`Tie`);
+     $(".result").text(`Tie.`);
   }
   else if (userInput.toLowerCase() === "rock" && computerInput === 2) {
      $(".result").text(`You Lost.`);
@@ -34,7 +34,7 @@ $(".play").click(function() {
      $(".result").text(`You Won.`);
   }
   else if (userInput.toLowerCase() === "paper" && computerInput === 1) {
-     $(".result").text(`You Won`);
+     $(".result").text(`You Won.`);
   }
   else if (userInput.toLowerCase() === "paper" && computerInput === 2) {
      $(".result").text(`Tie.`);
@@ -43,7 +43,7 @@ $(".play").click(function() {
      $(".result").text(`You Lost.`);
   }
   else if (userInput.toLowerCase() === "scissors" && computerInput === 1) {
-     $(".result").text(`You Lost`);
+     $(".result").text(`You Lost.`);
   }
   else if (userInput.toLowerCase() === "scissors" && computerInput === 2) {
      $(".result").text(`You Won.`);
@@ -57,13 +57,16 @@ $(".play").click(function() {
   }
 
 //Score Board
-  if (".result".text("You Won") {
-    scoreboard = scoreboard_user + 1
+  if ($(".result").text() === "You Won.") {
+    scoreboard_user = scoreboard_user + 1
+    $(".scoreboarduser").text(scoreboard_user);
   }
   
-  else if (".result".text() === "You Lost"){
-    
+  else if ($(".result").text() === "You Lost.") {
+    scoreboard_computer = scoreboard_computer + 1
+    $(".scoreboardcomputer").text(scoreboard_computer);
   }
+  
   
   
 });
