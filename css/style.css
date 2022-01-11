@@ -17,3 +17,11 @@ body {
   background-color: rgb(233,236,239);
   font-family: Andale Mono, monospace;
 }
+
+.scoreboarduser {
+  color: green;
+}
+
+.scoreboardcomputer {
+  color: red;
+}

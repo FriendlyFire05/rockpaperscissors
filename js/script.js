@@ -1,9 +1,11 @@
-let scoreboard_user = 0;
-let scoreboard_computer = 0;
+//Scoreboard
+  let scoreboard_user = 0;
+  let scoreboard_computer = 0;
 
-$(".play").click(function() {
+//Start Button
+  $(".play").click(function() {
   
-  // Computer Random Choice
+// Computer Random Choice
   let computerInput;
   computerInput = Math.random() * 3;
   computerInput = Math.ceil(computerInput);
@@ -17,13 +19,12 @@ $(".play").click(function() {
    $(".computerChoice").text("Scissors")
   }
   
-  //User Choice
+//User Choice
   let userInput;
   userInput = $(".input").val();
   $(".userChoice").text(userInput);
   
-  //Win or Lose
-  console.log("userInput",userInput,"Rock");
+//Win or Lose
   if (userInput.toLowerCase() === "rock" && computerInput === 1) {
      $(".result").text(`Tie.`);
   }
@@ -52,22 +53,32 @@ $(".play").click(function() {
      $(".result").text(`Tie.`);
   }
   else {
-    $(".result").text(`Please pick either rock, paper, or scissors.`)
-    
+    $(".result").text(`- Please pick either rock, paper, or scissors. -`)
+  }
+  
+//Capatilization in User Choice
+  if (userInput.toLowerCase() === "rock") {
+    $(".userChoice").text('Rock');
+  }
+  else if (userInput.toLowerCase() === "paper") {
+    $(".userChoice").text('Paper');
+  }
+  else if (userInput.toLowerCase() === "scissors") {
+    $(".userChoice").text('Scissors');
   }
 
 //Score Board
   if ($(".result").text() === "You Won.") {
     scoreboard_user = scoreboard_user + 1
-    $(".scoreboarduser").text(scoreboard_user);
+    $(".scoreboarduser").text(`Score: ${scoreboard_user}`);
+    $(".scoreboardcomputer").text(`Score: ${scoreboard_computer}`);
   }
   
   else if ($(".result").text() === "You Lost.") {
     scoreboard_computer = scoreboard_computer + 1
-    $(".scoreboardcomputer").text(scoreboard_computer);
-  }
-  
-  
+    $(".scoreboardcomputer").text(`Score: ${scoreboard_computer}`);
+    $(".scoreboarduser").text(`Score: ${scoreboard_user}`);
+  } 
   
 });
 
